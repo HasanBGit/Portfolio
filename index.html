@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan - AI Researcher</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <img src="logo.png" alt="Hassan" class="logo-img">
+            </div>
+
+            <!-- Profile Info -->
+            <div class="profile-section">
+                <h1 class="name">Hassan</h1>
+                <p class="title">AI Researcher</p>
+            </div>
+
+            <!-- Info Items -->
+            <div class="info-items">
+                <div class="info-item">
+                    <span class="icon" aria-hidden="true">📍</span>
+                    <span>Makkah, Saudi Arabia</span>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com/HasanBGIt" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://x.com/hsn7_k" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/hsnhb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                    <img src="linkedin-logo.png" alt="" class="social-icon" width="20" height="20">
+                </a>
+                <a href="https://huggingface.co/HassanB4" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face" title="Hugging Face">
+                    <img src="hf-logo.png" alt="" class="social-icon" width="20" height="20">
+                </a>
+                <a href="https://scholar.google.com/citations?hl=en&user=2VzOr0kAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+                    <img src="GoogleScholar-logo.png" alt="" class="social-icon" width="20" height="20">
+                </a>
+                <a href="https://www.kaggle.com/hassan45hb" target="_blank" rel="noopener noreferrer" aria-label="Kaggle" title="Kaggle">
+                    <img src="Kaggale-logo.png" alt="" class="social-icon" width="20" height="20">
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Quick Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Projects</span>
+                    <span class="value">15</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Publications</span>
+                    <span class="value">4</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Internships</span>
+                    <span class="value">3</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="header">
+                <h1 class="header-title" aria-label="Portfolio">Portfolio</h1>
+            </header>
+            <!-- Keyboard Help -->
+            <div id="helpHint" class="help-hint hidden">
+                <div class="help-content">
+                    <div class="help-grid">
+                        <div><kbd>1</kbd> Home</div>
+                        <!-- <div><kbd>2</kbd> ModelCraft</div> -->
+                        <div><kbd>2</kbd> Papers</div>
+                        <div><kbd>3</kbd> Projects</div>
+                        <div><kbd>?</kbd> Toggle help</div>
+                    </div>
+                    <button class="close-help" aria-label="Close help">✕</button>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <nav class="tabs-nav">
+                <div class="tabs-container">
+                    <button class="tab-button active" data-tab="home" title="Press 1 to switch">
+                        <span>Home</span>
+                        <span class="tab-key">1</span>
+                    </button>
+                    <!-- ModelCraft Core tab (commented out – code preserved)
+                    <button class="tab-button" data-tab="modelcraft-core" title="Press 2 to switch">
+                        <span>ModelCraft Core</span>
+                        <span class="tab-key">2</span>
+                    </button>
+                    -->
+                    <button class="tab-button" data-tab="paper-replication" title="Press 2 to switch">
+                        <span>Paper Replication</span>
+                        <span class="tab-key">2</span>
+                    </button>
+                    <button class="tab-button" data-tab="projects" title="Press 3 to switch">
+                        <span>Projects</span>
+                        <span class="tab-key">3</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Home Tab -->
+                <div id="home" class="tab-content active">
+                    <section class="hero-section">
+                        <h2>Hi there, I am Hassan!</h2>
+                        <p>Third-year Software Engineering student at Umm Al-Qura University, where AI became my main focus. I started interested in building applications and shifted toward understanding how models learn, how evaluation shapes outcomes, and why small training choices matter. I aim to contribute to robust AI systems in Saudi Arabia—especially Arabic and dialectal language technologies—through open and reproducible research, with an emphasis on careful experimentation and methodological rigor.</p>
+                    </section>
+
+                    <section class="education-section">
+                        <h3>Education</h3>
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h4>B.S. in Software Engineering</h4>
+                                    <p class="company">Umm Al-Qura University</p>
+                                </div>
+                                <span class="period">Expected June 2027</span>
+                            </div>
+                            <p class="location">Makkah, Saudi Arabia</p>
+                            <p class="gpa">GPA: 3.87/4.00</p>
+                        </div>
+                    </section>
+
+                    <section class="research-section">
+                        <h3>Research Experience</h3>
+                        <div class="experience-grid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>AI Researcher</h4>
+                                        <p class="company">NAMAA Community · Riyadh, Saudi Arabia (Remote)</p>
+                                    </div>
+                                    <span class="period">Jan 2026 – Present</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Develop end-to-end systems for Arabic NLP shared tasks (speech diacritization, manuscript OCR/HTR).</li>
+                                    <li>Build and evaluate multimodal models (audio, text, manuscript images) under standardized competition protocols.</li>
+                                    <li>Co-author system papers on model design, data usage, and evaluation methodology for peer-reviewed publication.</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Research Assistant</h4>
+                                        <p class="company">Umm Al-Qura University · Makkah, Saudi Arabia (On-site)</p>
+                                    </div>
+                                    <span class="period">Oct 2025 – Feb 2026</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Led design and development of Haakkim, an arena-style human-preference evaluation platform for Arabic LLMs.</li>
+                                    <li>Built pipelines for blind pairwise comparison, dialect annotation, and statistical model ranking (inverse probability weighting, Bradley–Terry).</li>
+                                    <li>Co-authored manuscript on methodology and evaluation controls (under review); 1,300+ comparison samples and expanding.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="experience-section">
+                        <h3>Industry Experience</h3>
+                        <div class="experience-grid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Deputy Director of Technical &amp; Development Department</h4>
+                                        <p class="company">Synapse · Jeddah, Saudi Arabia</p>
+                                        <p class="role-timeline">Deputy Director (Mar 2026 – Present) · AI Engineer (Oct 2025 – Mar 2026)</p>
+                                    </div>
+                                    <span class="period">Oct 2025 – Present</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Lead technical and development department initiatives.</li>
+                                    <li>Developed and deployed RAG products with vector databases, embedding models, and LLM inference.</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>AI Engineer Intern</h4>
+                                        <p class="company">Lucidya</p>
+                                    </div>
+                                    <span class="period">Nov 2025 – Present</span>
+                                </div>
+                                <p class="location">Riyadh, Saudi Arabia (Remote)</p>
+                                <ul class="description-list">
+                                    <li>Developed backend and AI-enabled services supporting internal analytics, automation, and evaluation workflows</li>
+                                    <li>Built agentic systems to automate internal processes by orchestrating tools, tools execution, and decision logic</li>
+                                    <li>Converting experimental and research prototypes into deployable services; currently building an internal LLM evaluation platform and agent-based workflows that test models under structured scenarios, track performance metrics, and monitor output consistency (bachelor project)</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Data Analyst Intern</h4>
+                                        <p class="company">Uptrail · London, United Kingdom (Remote)</p>
+                                    </div>
+                                    <span class="period">Jul 2025 – Aug 2025</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Performed exploratory data analysis with Python, SQL, and Tableau for client-facing deliverables.</li>
+                                </ul>
+                                <p class="card-note">Award: <a href="https://drive.google.com/file/d/1MT1BZYHqZcvKfMhM3AVBGndY0aQO_t9o/view" target="_blank" rel="noopener noreferrer">Recommendation Letter</a> for analytical rigor and execution quality.</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>AI & Robotics Engineer Intern</h4>
+                                        <p class="company">Smart Methods</p>
+                                    </div>
+                                    <span class="period">Jun 2025 – Aug 2025</span>
+                                </div>
+                                <p class="location">Makkah, Saudi Arabia (On-site)</p>
+                                <ul class="description-list">
+                                    <li>Developed robotic prototypes integrating sensors and controllers (Arduino/ESP32) with real-time inference logic</li>
+                                    <li>Built computer vision pipelines for detection and classification integrated into interactive robotic behaviors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="publications-section">
+                        <h3>Publications</h3>
+                        <div class="publications-grid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4><a href="https://www.arxiv.org/abs/2508.13525" target="_blank" rel="noopener noreferrer">Saudi-Dialect-ALLaM: LoRA Fine-Tuning for Dialectal Arabic Generation</a></h4>
+                                        <p class="company">arXiv | First Author</p>
+                                    </div>
+                                    <span class="period">Aug 2025</span>
+                                </div>
+                                <p class="publication-venue">Presented at 1st Research Conference for Students of Makkah Region Universities (RCUSM), Jeddah</p>
+                                <ul class="description-list">
+                                    <li>LoRA fine-tuned ALLaM-7B on 5,466 Hijazi/Najdi instruction pairs, improving Saudi dialect control from 47.97% to 84.21% and reducing MSA leakage from 32.63% to 6.21%</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Haakkim: An Arena-Style Human Preference Evaluation Platform for Arabic LLMs</h4>
+                                        <p class="company">Under Review | Co-Author</p>
+                                    </div>
+                                    <span class="period">—</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Designed and implemented an Arabic LLM evaluation pipeline using blind pairwise human preference judgments and Bradley–Terry statistical modeling; 1,300+ human preference comparison samples with ongoing expansion</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4><a href="https://huggingface.co/HassanB4" target="_blank" rel="noopener noreferrer">Ketaba-OCR at AR-MS NakbaNLP 2026: Efficient Adaptation of VLMs for Handwritten Recognition</a></h4>
+                                        <p class="company">Under Review | Co-Author</p>
+                                    </div>
+                                    <span class="period">—</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Developed an Arabic manuscript OCR/HTR system for line-level transcription from scanned manuscript images; NakbaNLP 2026 shared task with CER = 0.08 and WER = 0.25 on the Omar Al-Saleh manuscript dataset</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Fine-Tashkeel at KSAA-2026: Seq2Seq Modeling for Automatic Diacritization of Speech Dictation</h4>
+                                        <p class="company">Under Review | Co-Author</p>
+                                    </div>
+                                    <span class="period">—</span>
+                                </div>
+                                <ul class="description-list">
+                                    <li>Developed a multimodal Arabic diacritization system for KSAA-2026 Task 2 combining Whisper encoder embeddings with generative small language models; evaluated on speech dictation data with WER = 0.34 and DER = 0.10</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>AI &amp; LLM Engineering</h4>
+                                <div class="skill-tags">
+                                    <span class="tag">LangChain</span>
+                                    <span class="tag">RAG</span>
+                                    <span class="tag">LLM Evaluation</span>
+                                    <span class="tag">Model Inference</span>
+                                    <span class="tag">LLM fine-tuning</span>
+                                    <span class="tag">Inference optimization</span>
+                                    <span class="tag">Experiment Tracking</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4>Software &amp; ML</h4>
+                                <div class="skill-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">NumPy</span>
+                                    <span class="tag">Pandas</span>
+                                    <span class="tag">scikit-learn</span>
+                                    <span class="tag">OpenCV</span>
+                                    <span class="tag">Java</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4>Data &amp; Backend</h4>
+                                <div class="skill-tags">
+                                    <span class="tag">PostgreSQL</span>
+                                    <span class="tag">FastAPI</span>
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">Data Pipelines</span>
+                                    <span class="tag">API Integration</span>
+                                    <span class="tag">Tableau</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4>Professional &amp; Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="tag">Experimental design</span>
+                                    <span class="tag">Research</span>
+                                    <span class="tag">Problem solving</span>
+                                    <span class="tag">Collaboration</span>
+                                    <span class="tag">Arabic (Native)</span>
+                                    <span class="tag">English (Professional)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="certifications-section">
+                        <h3>Certifications</h3>
+                        <div class="certifications-grid">
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>AWS AI Practitioner</h4>
+                                    <p>Amazon Web Services (AWS)</p>
+                                    <p class="year">May 2025 – May 2028</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>Deep Learning Specialization</h4>
+                                    <p>DeepLearning.AI</p>
+                                    <p class="year">Jul 2025</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>Advanced AI</h4>
+                                    <p>King Abdullah University of Science and Technology (KAUST)</p>
+                                    <p class="year">Feb 2025</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>McKinsey Forward Program</h4>
+                                    <p>McKinsey &amp; Company</p>
+                                    <p class="year">Dec 2024</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>Mathematics for Machine Learning and Data Science</h4>
+                                    <p>DeepLearning.AI</p>
+                                    <p class="year">Oct 2024</p>
+                                </div>
+                            </div>
+                            <div class="cert-card">
+                                <div class="cert-icon">📄</div>
+                                <div>
+                                    <h4>Python 3 Programming Specialization</h4>
+                                    <p>University of Michigan</p>
+                                    <p class="year">Sep 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="volunteering-section">
+                        <h3>Volunteering</h3>
+                        <div class="experience-grid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Vice President of the Scientific Committee</h4>
+                                        <p class="company">R&D Club, Umm Al-Qura University</p>
+                                    </div>
+                                    <span class="period">Sep 2025 – Jan 2026</span>
+                                </div>
+                                <p class="location">Makkah, Saudi Arabia</p>
+                                <ul class="description-list">
+                                    <li>Organize research and AI workshops; coordinate speakers, agendas, and student technical activities</li>
+                                </ul>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div>
+                                        <h4>Volunteer</h4>
+                                        <p class="company">Ministry of Sport & Holy Makkah Municipality</p>
+                                    </div>
+                                    <span class="period">Oct 2024</span>
+                                </div>
+                                <p class="location">Makkah, Saudi Arabia</p>
+                                <ul class="description-list">
+                                    <li>Supported a public-space beautification initiative with a 100+ volunteer team</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- ModelCraft Core Tab (commented out – code preserved; uncomment to restore)
+                <div id="modelcraft-core" class="tab-content">
+                    <div>
+                        <h2>ModelCraft Core</h2>
+                        <p class="tab-subtitle">Foundational machine learning implementations from scratch</p>
+                    </div>
+
+                    <div class="repo-link-banner">
+                        <a href="https://github.com/HasanBGit/ModelCraft-Core" target="_blank" rel="noopener noreferrer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Full Repository on GitHub
+                        </a>
+                    </div>
+
+                    <div class="filter-section">
+                        <input type="text" id="coreSearch" placeholder="Search models (e.g., CNN, GAN, Diffusion...)" class="search-input">
+                        <div class="filter-group">
+                            <p class="filter-label">Filter by tags:</p>
+                            <div id="coreTags" class="tag-filter"></div>
+                        </div>
+                        <p class="result-count">Showing <span id="coreCount">0</span> models</p>
+                    </div>
+
+                    <div id="coreGrid" class="grid-container"></div>
+                </div>
+                -->
+
+                <!-- Paper Replication Tab -->
+                <div id="paper-replication" class="tab-content">
+                    <div>
+                        <h2>Paper Replication</h2>
+                        <p class="tab-subtitle">Re-implementations of influential AI/ML papers</p>
+                    </div>
+
+                    <div class="coming-soon-section">
+                        <div class="coming-soon-content">
+                            <span class="coming-soon-icon">🚧</span>
+                            <h3>Coming Soon</h3>
+                            <p>I focus on reproducing research papers to better understand experimental design and methodological rigor. Re-implementations and walkthroughs of influential AI/ML papers are in progress—stay tuned.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Tab -->
+                <div id="projects" class="tab-content">
+                    <div>
+                        <h2>Projects</h2>
+                        <p class="tab-subtitle">Featured projects and open-source work</p>
+                    </div>
+
+                    <div class="projects-list">
+                        <div class="card">
+                            <h3>LucidFlow Engineering Quality Platform</h3>
+                            <p>Engineering quality and delivery analytics system. Designed the LucidFlow initiative to improve engineering quality, documentation standards, and delivery reliability. Built an automation layer integrated into daily engineering workflows to enforce PR quality and documentation completeness.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Engineering Quality</span>
+                                <span class="tag">Internal Tools</span>
+                            </div>
+                            <p class="project-note">Lucidya · Nov 2025 – Present</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/Saudi-Dialect-ALLaM" target="_blank" rel="noopener noreferrer">Saudi-Dialect-ALLaM</a></h3>
+                            <p>Code-only release for LoRA fine-tuning of ALLaM-7B for Saudi dialect generation (Hijazi &amp; Najdi). Includes training scripts, evaluation (dialect classifier, chrF++, BERTScore, diversity), inference helpers, and analysis notebooks. Dialect-token variant: <strong>84.21%</strong> Saudi alignment, <strong>6.21%</strong> MSA leakage (base 47.97% / 32.63%). No dataset or weights released—reproducible on your own data.</p>
+                            <div class="skill-tags">
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">LoRA</span>
+                                <span class="tag">ALLaM-7B</span>
+                                <span class="tag">Reproducible Research</span>
+                            </div>
+                            <p class="project-note">Aug 2025 · <a href="https://www.arxiv.org/abs/2508.13525" target="_blank" rel="noopener noreferrer">Paper (arXiv)</a> · First-author, RCUSM Jeddah</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/Ketaba-OCR-LoRA" target="_blank" rel="noopener noreferrer">Ketaba-OCR at AR-MS NakbaNLP 2026</a></h3>
+                            <p>Parameter-efficient Arabic HTR for historical manuscripts (Omar Al-Saleh Memoir Collection, Ruq'ah/Naskh). QLoRA fine-tuning of Sherif’s Arabic–English HTR model with DoRA and RSLoRA; Linear+Boost weighted ensemble of six variants. <strong>1st on per-line evaluation</strong> (CER 0.0819, WER 0.2588) and <strong>3rd on official corpus-wide</strong> (CER 0.0938, WER 0.2996). Co-authored with NAMAA Community.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">QLoRA</span>
+                                <span class="tag">DoRA</span>
+                                <span class="tag">HTR</span>
+                            </div>
+                            <p class="project-note">Apache 2.0 · <a href="https://huggingface.co/HassanB4/Ketaba-OCR-LoRA" target="_blank" rel="noopener noreferrer">Model</a> · <a href="https://colab.research.google.com/drive/1eKVDxrgMlyBLhDnW_0Gdm2kHC1153N7j?usp=sharing" target="_blank" rel="noopener noreferrer">Colab</a></p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/QARI-OCR-LoRA" target="_blank" rel="noopener noreferrer">QARI-OCR-LoRA</a></h3>
+                            <p>Additional experimental model for <a href="https://acrps.ai/nakba-nlp-manu-understanding-2026" target="_blank" rel="noopener noreferrer">NakbaNLP 2026</a> AR-MS: LoRA fine-tuning of NAMAA-Space’s Qari-OCR (Qwen2-VL-2B) with DoRA and RSLoRA (~37.6M trainable, 1.67%). CER 0.2635 on blind test. Companion to our main submission Ketaba-OCR (1st per-line).</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">LoRA</span>
+                                <span class="tag">DoRA</span>
+                                <span class="tag">RSLoRA</span>
+                            </div>
+                            <p class="project-note">Apache 2.0 · <a href="https://huggingface.co/HassanB4/Qari-OCR-LoRA" target="_blank" rel="noopener noreferrer">Model on Hugging Face</a></p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/MLP-from-Scratch" target="_blank" rel="noopener noreferrer">MLP-from-Scratch</a></h3>
+                            <p>Multi-Layer Perceptron implemented from scratch in plain Python with no deep learning frameworks—gradient descent, backpropagation, and training loop coded by hand. Trained on the Iris dataset: 98.33% training accuracy and 100% test accuracy over 100 epochs.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Neural Networks</span>
+                                <span class="tag">Backpropagation</span>
+                                <span class="tag">From Scratch</span>
+                            </div>
+                            <p class="project-note">MIT License</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/CV-Website" target="_blank" rel="noopener noreferrer">Professional CV Generator</a></h3>
+                            <p>Flask web app that generates ATS-friendly PDF resumes from an HTML/CSS/JS frontend with LaTeX compilation in Docker. Features drag-and-drop section ordering, dynamic entries for experience/education/projects/publications, and an optimized LaTeX image (~500MB).</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">LaTeX</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                            <p class="project-note">MIT-compatible · Deployable on Railway, Render, Fly.io</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/Smart-Methods-Tasks" target="_blank" rel="noopener noreferrer">Smart-Methods-Tasks</a></h3>
+                            <p>Robotics Engineering internship deliverables at SmartMethods (Makkah): 5-DOF robotic arm design, Arduino (servos, sensors, latching power), computer vision with OpenCV and Teachable Machine, voice assistant integrating STT/TTS/LLMs, ROS2 Turtlesim, and web development tasks.</p>
+                            <div class="skill-tags">
+                                <span class="tag">G-code</span>
+                                <span class="tag">Arduino</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">ROS2</span>
+                            </div>
+                            <p class="project-note">MIT License · Jun–Aug 2025</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://github.com/HasanBGit/Chat_App" target="_blank" rel="noopener noreferrer">Chat App</a></h3>
+                            <p>Python chat application with real-time messaging via XML-RPC. Includes a command-line client and a modern GUI with customtkinter (tabs for chat and login). Multithreaded server for concurrent clients; join multiple rooms, view online users, clear history.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">XML-RPC</span>
+                                <span class="tag">customtkinter</span>
+                                <span class="tag">Multithreading</span>
+                            </div>
+                            <p class="project-note">MIT License</p>
+                        </div>
+
+                        <!-- Kaggle Notebooks -->
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/arasl-acc-97" target="_blank" rel="noopener noreferrer">ArASL-Acc &gt; 97%</a></h3>
+                            <p>Arabic Alphabets Sign Language (ArASL) classification model achieving over 97% accuracy. Computer vision pipeline for recognizing Arabic sign language gestures from the ArASL dataset.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Sign Language</span>
+                                <span class="tag">Arabic</span>
+                                <span class="tag">Deep Learning</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/fruit-recognition-efficientnet-acc-99-91" target="_blank" rel="noopener noreferrer">Fruit Recognition (EfficientNet, Acc &gt; 99.91%)</a></h3>
+                            <p>Fruit image classification using EfficientNet with accuracy above 99.91%. Transfer learning and fine-tuning on a fruit dataset for robust multi-class recognition.</p>
+                            <div class="skill-tags">
+                                <span class="tag">EfficientNet</span>
+                                <span class="tag">Transfer Learning</span>
+                                <span class="tag">Image Classification</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/k-means-clustering" target="_blank" rel="noopener noreferrer">K-Means Clustering</a></h3>
+                            <p>Implementation and tutorial on K-Means clustering from scratch. Covers initialization, iteration, and evaluation with visualizations on sample datasets.</p>
+                            <div class="skill-tags">
+                                <span class="tag">Clustering</span>
+                                <span class="tag">Unsupervised Learning</span>
+                                <span class="tag">Python</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/cdcgan-celeba-female-or-male" target="_blank" rel="noopener noreferrer">cDCGAN — CelebA Female or Male</a></h3>
+                            <p>Conditional Deep Convolutional GAN for generating face images by gender using the CelebA dataset. Conditional labels drive class-specific image generation.</p>
+                            <div class="skill-tags">
+                                <span class="tag">GAN</span>
+                                <span class="tag">cDCGAN</span>
+                                <span class="tag">CelebA</span>
+                                <span class="tag">PyTorch</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/denoising-diffusion-probabilistic-stanfordcars" target="_blank" rel="noopener noreferrer">Denoising Diffusion Probabilistic (StanfordCars)</a></h3>
+                            <p>DDPM (Denoising Diffusion Probabilistic Model) applied to the Stanford Cars dataset. Forward and reverse diffusion process for high-quality car image generation.</p>
+                            <div class="skill-tags">
+                                <span class="tag">DDPM</span>
+                                <span class="tag">Diffusion</span>
+                                <span class="tag">Stanford Cars</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/sentiment-classifier-model" target="_blank" rel="noopener noreferrer">Sentiment Classifier Model</a></h3>
+                            <p>NLP sentiment classification model for text. End-to-end pipeline: preprocessing, embedding, and classifier for positive/negative (or multi-class) sentiment.</p>
+                            <div class="skill-tags">
+                                <span class="tag">NLP</span>
+                                <span class="tag">Sentiment Analysis</span>
+                                <span class="tag">Classification</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                        <div class="card">
+                            <h3><a href="https://www.kaggle.com/code/hassan45hb/vanilla-gan-mnist" target="_blank" rel="noopener noreferrer">Vanilla GAN (MNIST)</a></h3>
+                            <p>Vanilla Generative Adversarial Network trained on MNIST. Generator and discriminator from scratch for digit image generation.</p>
+                            <div class="skill-tags">
+                                <span class="tag">GAN</span>
+                                <span class="tag">MNIST</span>
+                                <span class="tag">Generative Models</span>
+                            </div>
+                            <p class="project-note"><a href="https://www.kaggle.com/hassan45hb/code" target="_blank" rel="noopener noreferrer">Kaggle</a> · Notebook</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
